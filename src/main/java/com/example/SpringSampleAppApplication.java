@@ -66,6 +66,12 @@ class HomeRestController {
 		healthy=false;
 		return "Killed "+hostname;
 	}
+	
+	@RequestMapping("/cure") 
+	public String cure(){
+		healthy=true; 
+		return "Relived " + hostname; 
+	}
 
 	@Autowired
 	private Environment env;
